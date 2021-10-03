@@ -28,6 +28,15 @@ public class Main {
         MobileContact mobileContact2 = new MobileContact(4, "Gunnar", "Gunnarsson", "192837465");
         mobileContact2.print();
 
+        WorkContact workContact2 = new WorkContact(5, "Tove", "Gustavsdottir", "111111111");
+        workContact2.print();
+
+        PrivateContact privateContact2 = new PrivateContact(6, "Bjorn", "Bjornsson", "546372819");
+        privateContact2.print();
+
+        MobileContact mobileContact3 = new MobileContact(7, "Contact", "Contactsson", "123987465");
+        mobileContact3.print();
+
         System.out.println("-------METODA SEND-------");
 
         workContact.send();
@@ -37,7 +46,7 @@ public class Main {
 
         System.out.println("-------POLIMORFIZM-------");
 
-        PhoneContact[] contacts = {mobileContact, workContact, privateContact, mobileContact2};
+        PhoneContact[] contacts = {mobileContact, workContact, privateContact, mobileContact2, workContact2, privateContact2, mobileContact3};
 
         for(PhoneContact c : contacts){
             c.print();
