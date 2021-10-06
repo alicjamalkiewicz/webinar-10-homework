@@ -7,15 +7,16 @@ public class PrivateContact extends PhoneContact {
     }
 
     @Override
-    public void print() {
+    public Object print() {
         System.out.print("Kontakt " + ContactType.PRIV.getFullType());
         super.print();
+        return null;
     }
 
     @Override
     public void send() {
         super.send();
-        System.out.print("Kontakt " + ContactType.PRIV.getFullType() + " do ");
+        System.out.print("Kontakt " + ContactType.PRIV.getFullType() + " do " + getName() + " " + getSurname());
         //+ WorkContact.getName() + WorkContact.getSurame());
         super.print();
     }

@@ -1,5 +1,7 @@
 package pl.test.PhoneBook;
 
+import java.util.ArrayList;
+
 public class PhoneContact implements PrintableContact {
     private static int numberOfContacts = 0;
     private int id;
@@ -28,9 +30,10 @@ public class PhoneContact implements PrintableContact {
     }
 
     @Override
-    public void print() {
+    public Object print() {
         System.out.format("\n%d | %s | %s | %s\n \n", id, name, surname, number);
         //System.out.println("\n");
+        return null;
     }
 
     @Override
@@ -39,6 +42,14 @@ public class PhoneContact implements PrintableContact {
         //print();
 
     }
+
+//    @Override
+//    public void addToPhonebook() {
+//        ArrayList <PhoneContact> phoneContacts = new ArrayList<>();
+//        for(PhoneContact phoneContact : phoneContacts){
+//            System.out.println(phoneContact.getName());
+//        }
+//    }
 
     public int getId() {
         return id;

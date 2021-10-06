@@ -2,6 +2,7 @@ package pl.test.PhoneBook;
 
 public interface PrintableContact {
 
-    void print();
+    Object print();
     void send();
+    //void addToPhonebook();
 }

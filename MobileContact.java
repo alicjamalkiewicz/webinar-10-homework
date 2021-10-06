@@ -7,14 +7,15 @@ public class MobileContact extends PhoneContact {
     }
 
     @Override
-    public void print() {
+    public Object print() {
         System.out.print("Kontakt " + ContactType.MOBI.getFullType());
         super.print();
+        return null;
     }
     @Override
     public void send() {
         super.send();
-        System.out.print("Kontakt " + ContactType.MOBI.getFullType() + " do ");
+        System.out.print("Kontakt " + ContactType.MOBI.getFullType() + " do " + getName() + " " + getSurname());
         //+ WorkContact.getName() + WorkContact.getSurame());
         super.print();
     }

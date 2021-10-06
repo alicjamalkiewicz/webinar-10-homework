@@ -9,6 +9,9 @@ Wykorzystując polimorfizm stworzyć tablicę przechowującą kilka kontaktów r
 i na każdym kontakcie wywołać metodę print()
  */
 
+import java.util.Arrays;
+import java.util.List;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -48,10 +51,19 @@ public class Main {
 
         PhoneContact[] contacts = {mobileContact, workContact, privateContact, mobileContact2, workContact2, privateContact2, mobileContact3};
 
-        for(PhoneContact c : contacts){
+        for (PhoneContact c : contacts) {
             c.print();
         }
 
+        System.out.println("ZADANIE DOMOWE 04.10");
 
+        /* W aplikacji książka telefoniczna: zamień tablicę na kolekcję
+        (sami zdecydujcie czego użyć: lista, kolejka, mapa, zbiór) i wywołaj metodę send()
+         */
+        List<PhoneContact> contactList = Arrays.asList(contacts);
+        for (PhoneContact c : contactList){
+            c.send();
+
+        }
     }
 }
